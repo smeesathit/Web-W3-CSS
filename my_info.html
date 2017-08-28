@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+	<head>
+		<title>My Home Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Adding favicon with link tag -->	
+		<link rel="icon" type="image/png" sizes="24x24" href="favicon.png"/>
+		
+		<!-- Using W3 CSS -->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<!-- link rel="stylesheet" type="text/css" href="w3.css" -->
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css" >
+		<!-- link rel="stylesheet" type="text/css" href="w3-theme-teal.css" -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Using external JavaScript file-->
+	    <script src="javascript/sidebar.js"></script>	</head>
+
+	<body>
+	<!-- Side Navigation -->
+		<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-center" style="display:none" id="mySidebar">
+  		<h1 class="w3-xxlarge w3-text-theme">เมนูหลัก</h1>
+  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="index.html" class="w3-bar-item w3-button">หน้าหลัก</a>
+  <a href="my_info.html" class="w3-bar-item w3-button">ข้อมูลของฉัน</a>
+  <a href="my_favorite_song.html" class="w3-bar-item w3-button">เพลงโปรด</a>
+  <a href="my_favorite_clip.html" class="w3-bar-item w3-button">คลิปโปรด</a>
+  <a href="my_javascript_sample.html" class="w3-bar-item w3-button">จาวาสคริปต์โปรด</a>
+
+</nav>
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+  <div class="w3-center">
+  <h4>BEAUTIFUL RESPONSIVE WEB SITES</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">เว็บส่วนตัวของฉัน</h1>
+    <div class="w3-padding-32">
+     <a class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey">BUILT WITH W3.CSS</a>
+    </div>
+  </div>
+</header>
+
+
+<div class="w3-border">
+<div class="w3-bar w3-theme">
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openInfo(event,'hobby')">งานอดิเรก</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openInfo(event,'sport')">กีฬา</button>
+    <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openInfo(event,'food')">อาหาร</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openInfo(event,'book')">หนังสือ</button>
+  
+</div>
+
+<!-- Content-->
+<div id="hobby" class="w3-card-4 w3-container info w3-animate-opacity">
+<h2>งานอดิเรก</h2>
+<ul class="w3-ul w3-margin-bottom">
+  <li>อ่านหนังสือ</li>
+			<li>ถักไหมพรม</li>
+</ul>
+</div>
+<div id="sport" class="w3-card-4 w3-container info w3-animate-opacity">
+<h2>กีฬาที่ชอบ</h2>
+<br>
+<ul class="w3-ul w3-border w3-hoverable">
+  <li>ว่ายน้ำ</li>
+			<li>เทนนิส</li>
+			<li>ลีลาศ</li>
+</ul>
+<br>
+</div>
+
+<div id="food" class="w3-card-4 w3-container info w3-animate-opacity">
+<h2>อาหารที่ชอบ เรียงตามลำดับ</h2>
+<br>
+<ol class="w3-border">
+  <li>น้ำพริกกะปิ</li>
+			<li>ข้าวแช่</li>
+			<li>พิซซ่า</li>
+</ol>
+<br>
+</div>
+
+<div id="book" class="w3-container info w3-animate-opacity">
+  <hr>
+  <div class="w3-center">
+    <h2>หนังสือที่ชอบ</h2>    
+  </div>
+<div  class="w3-responsive w3-card-4">
+<table class="w3-table w3-striped w3-bordered">
+<thead>
+<tr class="w3-theme">
+<th>ชื่อหนังสือ</th>
+		    <th>ชื่อผู้แต่ง</th> 
+		    <th>ปีพิมพ์</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Harry Potter and the Philosopher's Stone</td>
+		    <td>J. K. Rowling</td> 
+		    <td>1997</td>
+</tr>
+<tr class="w3-white">
+  <td>นิกกับพิม</td>
+  <td>ว.ณ ประมวญมารค</td>
+  <td>2012</td>
+</tr>
+<tr>
+  <td>The Lord of the Rings</td>
+		    <td>J. R. R. Tolkien.</td> 
+		    <td>1954</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<hr>
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark w3-padding-16">
+  <h3>Footer</h3>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+  <p>Remember to check out our  <a href="https://www.w3schools.com/w3css/w3css_references.asp" class="w3-btn w3-theme-light" target="_blank">W3.CSS Reference</a></p>
+</footer>
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+		<script>
+
+			// Tabs
+function openInfo(evt, info) {
+  var i;
+  var x = document.getElementsByClassName("info");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(info).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+
+		</script>
+
+	</body>
+</html>
