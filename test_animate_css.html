@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+  <link rel="stylesheet" href="animate.css">
+  <style type="text/css">
+  	.item {
+background-color: pink;
+width: 100px;
+height: 100px;
+margin: 300px auto 0 auto;
+-webkit-animation-duration:3s;
+  	}
+a.button {
+	background: magenta;
+	color: white;
+	padding: 20px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 50px;
+	border-radius: 10px;
+	-webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  /*-webkit-animation-iteration-count: infinite;*/
+
+}
+  </style>
+
+</head>
+
+<body>
+<div class="item animated bounceInDown">
+	
+</div>
+
+<div><a href="#" class="button animated shake">Aloha!</a>
+</div>
+<div><a href="#" class="button">Click Me!</a>
+<input type="text" name="inputName">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var animationName = 'animated shake';
+		var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+		$('a.button').on('click', function(){
+			$('input[name=inputName]').addClass(animationName).one(animationend,function(){
+				$(this).removeClass(animationName);
+			});
+			
+		});
+});
+</script>
+</body>
+</html>

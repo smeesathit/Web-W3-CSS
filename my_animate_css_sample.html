@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 	<head>
-		<title>My Favorite Clip</title>
+		<title>My CSS Animation Samples</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Adding favicon with link tag -->	
+		<!-- Adding favicon with link tag --> 
 		<link rel="icon" type="image/png" sizes="24x24" href="favicon.png"/>
 		
 		<!-- Using W3 CSS -->
@@ -13,14 +13,19 @@
 		<!-- link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css" -->
 		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  	<link rel="stylesheet" href="css/animate.css">
+
 		<!-- Using external JavaScript file-->
 		<script src="javascript/sidebar.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 
 	<body>
-		<!-- Side Navigation -->
+	<!-- Side Navigation -->
 		<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-center" style="display:none" id="mySidebar">
-		<h1 class="w3-xxlarge w3-text-theme">เมนูหลัก</h1>
+			<h1 class="w3-xxlarge w3-text-theme">เมนูหลัก</h1>
 			<button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
 			<a href="index.html" class="w3-bar-item w3-button">หน้าหลัก</a>
 			<a href="my_info.html" class="w3-bar-item w3-button">ข้อมูลของฉัน</a>
@@ -34,8 +39,8 @@
 		<header class="w3-container w3-theme w3-padding" id="myHeader">
 			<i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
 			<div class="w3-center">
-				<h4>BEAUTIFUL RESPONSIVE WEB SITES</h4>
-				<h1 class="w3-xxxlarge w3-animate-bottom">เว็บส่วนตัวของฉัน</h1>
+			<h4>BEAUTIFUL RESPONSIVE WEB SITES</h4>
+			<h1 class="w3-xxxlarge w3-animate-bottom">เว็บส่วนตัวของฉัน</h1>
 				<div class="w3-padding-32">
 					<a class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey">BUILT WITH W3.CSS</a>
 				</div>
@@ -43,18 +48,31 @@
 		</header>
 
 		<!-- Content-->
-		<div class="w3-container w3-animate-opacity" style=" text-align: center;">
-			<h2>Space Cats — Magic Fly by <a href="https://www.youtube.com/channel/UCnCZFLz-8IY4eZBxJDjKHSw" target="_blank" >Enjoyker</a></h2> 
+		<div class="w3-padding-32 w3-center">
+			<!-- Header of the section -->
+			<h2 w2-center>ตัวอย่างทำภาพเคลื่อนไหวด้วย Animate.css</h2>
+			<div class="item animated bounceInDown"></div>
 
-			<video id="video1" width="420" height="340" controls>
-				<source src="videos/space_cats.mp4" type="video/mp4">
-				บราวเซอร์นี้ไม่รองรับ video tag
-			</video>
-			<br><br>
-			<button onclick="makeBig()">ขยาย</button>
-			<button onclick="makeSmall()">ย่อ</button>
-			<button onclick="makeNormal()">ปกติ</button>	
+			<div><a href="#" class="w3-button w3-pink w3-text-white w3-xxlarge animated rubberBand">Aloha!</a>
+			</div>
+			<div class="w3-padding-32"><a href="#" class="w3-button w3-indigo w3-xxlarge">Click Me!</a>
+				<input type="text" name="inputName" class="w3-theme-l4">
+			</div>	
 		</div>
+
+		<script type="text/javascript">
+			$(function() {
+				var animationName = 'animated shake';
+				var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+				$('a.w3-button').on('click', function(){
+					$('input[name=inputName]').addClass(animationName).one(animationend,function(){
+						$(this).removeClass(animationName);
+					});
+			
+				});
+			});
+		</script>
+
 		<br>
 
 		<!-- Footer -->
@@ -68,26 +86,5 @@
 			</div>
 			<p>For information check out <a href="https://www.w3schools.com/w3css/w3css_references.asp" class="w3-btn w3-theme-light" target="_blank">W3.CSS Reference</a></p>
 		</footer>
-
-		<!-- Script for enlarging and reducing the video view -->
-		<script>
-			var myVideo = document.getElementById("video1"); 
-
-			function makeBig() { 
-		   
-				myVideo.width = 520; 
-				myVideo.height = 440;
-			} 
-
-			function makeSmall() { 
-				myVideo.width = 320; 
-				myVideo.height = 240;
-			} 
-
-			function makeNormal() { 
-				myVideo.width = 420; 
-				myVideo.height = 340;
-			} 
-		</script>
 	</body>
 </html>
