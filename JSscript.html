@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS sample</title>
+</head>
+<body>
+	<p>ชื่อ: <input type="text" placeholder="กรอกชื่อ" id="name"></p>
+	<p><button onclick="showMessage()">แสดง</button></p>
+	<p id="message">สวัสดี คุณ</p>
+
+<script type="text/javascript">
+	function showMessage(){
+    var name = document.getElementById("name");
+    document.getElementById("message").innerHTML = "สวัสดี คุณ" + name.value;
+}
+</script>
+	
+</body>
+</html>
